@@ -7,8 +7,8 @@ file_data = []
 while True:
     print("\n\nRLE Menu\n--------\n0. Exit\n1. Load File\n2. Load Test Image")
     print("3. Read RLE String\n4. Read RLE Hex String\n5. Read Data Hex String")
-    print("6. Display Image\n7. Display RLE String\n8. Display RLE Hex Data\n9. Display Hex Flat Data")
-    option = int(input("\nSelect a Menu Option: "))
+    print("6. Display Image\n7. Display RLE String\n8. Display Hex RLE Data\n9. Display Hex Flat Data")
+    option = int(input("\nSelect a Menu Option:"))
     if option == 0:
         break
     elif option == 1:

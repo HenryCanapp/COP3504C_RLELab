@@ -20,4 +20,4 @@ while True:
     elif option == 6:
         console_gfx.display_image(file_data)
     elif option == 7:
-        print(Week12Lab_B.count_runs(file_data))
+        print(Week12Lab_B.get_decoded_length(Week12Lab_B.encode_rle(file_data)))

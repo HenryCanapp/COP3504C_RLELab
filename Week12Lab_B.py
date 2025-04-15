@@ -15,7 +15,7 @@ def encode_rle(flat_data):
     output = [1, flat_data[0]]
     run_index = 0
     for i in range(1, len(flat_data)):
-        if flat_data[i] == flat_data[i-1]:
+        if flat_data[i] == flat_data[i-1] and output[run_index * 2] < 16:
             output[run_index * 2] += 1
         else:
             run_index += 1
@@ -25,17 +25,15 @@ def encode_rle(flat_data):
 
 def get_decoded_length(rle_data):
     output = 0
-    for i in range(0,len(rle_data)):
-        output += rle_data[i]
-        i += 1
+    for i in range(0,len(rle_data)//2):
+        output += rle_data[i * 2]
     return output
 
 def decode_rle(rle_data):
     output = []
-    for i in range(0, len(rle_data)):
-        for j in range(0, rle_data[i]):
-            output.append(rle_data[i+1])
-        i += 1
+    for i in range(0, len(rle_data)//2):
+        for j in range(0, rle_data[i * 2]):
+            output.append(rle_data[i * 2 + 1])
     return output
 
 def string_to_data(data_string):

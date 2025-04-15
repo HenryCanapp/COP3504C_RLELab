@@ -19,7 +19,7 @@ def encode_rle(flat_data):
     output = [1, flat_data[0]]
     run_index = 0
     for i in range(1, len(flat_data)):
-        if flat_data[i] == flat_data[i-1] and output[run_index * 2] < 16:
+        if flat_data[i] == flat_data[i-1] and output[run_index * 2] < 15:
             output[run_index * 2] += 1
         else:
             run_index += 1

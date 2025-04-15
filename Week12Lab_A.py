@@ -1,4 +1,5 @@
 import console_gfx
+import Week12Lab_B
 
 print("Welcome to the RLE image encoder!")
 print("\nDisplaying Spectrum Image:")
@@ -18,3 +19,5 @@ while True:
         file_data = console_gfx.test_image
     elif option == 6:
         console_gfx.display_image(file_data)
+    elif option == 7:
+        print(Week12Lab_B.count_runs(file_data))

@@ -6,9 +6,13 @@ def to_hex_string(data):
 
 def count_runs(flat_data):
     output = 1
+    current_run = 1
     for i in range(1, len(flat_data)):
-        if flat_data[i] != flat_data[i-1]:
+        if flat_data[i] != flat_data[i-1] or current_run >= 16:
             output += 1
+            current_run = 1
+        else:
+            current_run += 1
     return output
 
 def encode_rle(flat_data):

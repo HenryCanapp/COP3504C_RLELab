@@ -105,13 +105,13 @@ while True:
             print(f"RLE representation: {to_rle_string(encode_rle(file_data))}")
     elif option == 8:
         if len(file_data) == 0:
-            print(f"RLE hex value: (no data)")
+            print(f"RLE hex values: (no data)")
         else:
-            print(f"RLE hex value: {to_hex_string(encode_rle(file_data))}")
+            print(f"RLE hex values: {to_hex_string(encode_rle(file_data))}")
     elif option == 9:
         if len(file_data) == 0:
-            print(f"Flat hex value: (no data)")
+            print(f"Flat hex values: (no data)")
         else:
-            print(f"Flat hex values: {to_hex_string(file_data)}")
+            print(f"Flat hex valuess: {to_hex_string(file_data)}")
     else:
         print("Error! Invalid input.")

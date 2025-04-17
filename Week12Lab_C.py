@@ -123,3 +123,6 @@ def main():
                 print(f"Flat hex values: {to_hex_string(file_data)}")
         else:
             print("Error! Invalid input.")
+
+if __name__ == "__main__":
+    main()
